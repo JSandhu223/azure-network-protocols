@@ -33,15 +33,22 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>Actions and Observations</h2>
 
+<p>
+  With Azure, we can deploy a virtual machine to the cloud and connect to it via Remote Desktop Protocol. Let's deploy a Windows 10 Pro VM under a resource group, which we'll call `azure-networking`. For our case, 2 CPUs and 16 GB of RAM will be enough.
+</p>
+
 <p float="left">
   <img src="images/Step1_WindowsVMCreation.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
   <!-- <img src="images/Step1_WindowsVMCreation2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> -->
 </p>
 
 <p>
-With Azure, we can deploy a virtual machine to the cloud and connect to it via Remote Desktop Protocol. Let's deploy a Windows 10 Pro VM under a resource group, which we'll call `azure-networking`. For our case, 2 CPUs and 16 GB will be enough.
+  The Ubuntu Server VM is not as resource heavy, so we can opt to use one of the cheaper hardware size.
 </p>
-<br />
+
+<p>
+  <img src="images/Step1_UbuntuServerVMCreation.png" height="80%" width="80%"/>
+</p>
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
