@@ -43,11 +43,12 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 </p>
 
 <p>
-  The Ubuntu Server VM is not as resource heavy, so we can opt to use one of the cheaper hardware size.
+  The Ubuntu Server VM is not as resource heavy, so we can opt to use one of the cheaper hardware size. To ensure connectivity between the two VMs, we can put this VM under the same virtual network.
 </p>
 
 <p>
   <img src="images/Step1_UbuntuServerVMCreation.png" height="80%" width="80%"/>
+  <img src="images/Step1_UbuntuServerVMCreation_NetworkSettings.png" height="80%" width="80%"/>
 </p>
 
 <p>
