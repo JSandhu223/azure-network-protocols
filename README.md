@@ -35,7 +35,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <p float="left">
   <img src="images/Step1_WindowsVMCreation.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-  <img src="images/Step1_WindowsVMCreation2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <!-- <img src="images/Step1_WindowsVMCreation2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> -->
 </p>
 
 <p>
