@@ -21,15 +21,15 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>Operating Systems Used </h2>
 
-- Windows 10 (21H2)
+- Windows 10 Pro (21H2)
 - Ubuntu Server 20.04
 
 <h2>High-Level Steps</h2>
 
-- Step 1
-- Step 2
-- Step 3
-- Step 4
+1. Create a Windows 10 Pro and Ubuntu Server virtual machine under the same virtual network
+2. Remote connect into the Windows virtual machine
+3. Install Wireshark
+4. Execute various Windows networking commands and inspect packets in Wireshark
 
 <h2>Actions and Observations</h2>
 
