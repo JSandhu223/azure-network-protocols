@@ -49,7 +49,7 @@ The Ubuntu Server VM is not as resource heavy, so we can opt to use one of the c
   <img src="images/Step1_UbuntuServerVMCreation_NetworkSettings.png" height="80%" width="80%"/>
 </p>
 
-Now that the VMs are created, we can use **Remote Desktop Connection** to connect to our Windows 10 Pro VM. Once the Windows setup is complete, download [Wireshark](https://www.wireshark.org/download.html). We will download the `Windows x64 installer` and stick with the default settings. Note that the installer will also install the `Npcap` program.
+Now that the VMs are created, we can use **Remote Desktop Connection** to connect to our Windows 10 Pro VM. Once the Windows setup is complete, download [Wireshark](https://www.wireshark.org/download.html). We will download the `Windows x64 Installer` and stick with the default settings. Note that the Wireshark installer will also install `Npcap`.
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
