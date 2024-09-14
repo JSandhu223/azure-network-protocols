@@ -71,3 +71,15 @@ Then we can start the packet trace by clicking the button on the top left.
 We should then be greeted with the following screen:
 
 <img src="images/WiresharkICMPBlank.png" height="80%" width="80%"/>
+
+At the moment, there are no packets to display as there isn't any ICMP traffic being sent or received by our machine. Luckily, the Windows OS has built-in commands that utilize the ICMP protocol for sending and receiving information. One of these commands is the `ping` command, which is used to test connectivity to another machine. Since we created an Ubuntu client under the same virtual network as our Windows client, we can ping its private IP address (in my case this is `10.0.0.5`). In command prompt, execute the following command:
+
+`ping 10.0.0.5`
+
+Of course, your IP address configuration may be different so be sure to find your Ubuntu client under `Virtual Machines` in the Azure portal. Now, if you see something like this from your ping result, it means the Ubuntu client was succesfully reached!
+
+<img src="images/PingCommand.png" height="80%" width="80%"/>
+
+If we take a look at the Wireshark packet trace, we will notice some packet information.
+
+<img src="images/PingPacketTrace.png" height="80%" width="80%"/>
