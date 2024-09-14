@@ -33,23 +33,23 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 
 <h2>Actions and Observations</h2>
 
-<p>
-  With Azure, we can deploy a virtual machine to the cloud and connect to it via Remote Desktop Protocol. Let's deploy a Windows 10 Pro VM under a resource group, which we'll call `azure-networking`. For our case, 2 CPUs and 16 GB of RAM will be enough.
-</p>
+
+With Azure, we can deploy a virtual machine to the cloud and connect to it via Remote Desktop Protocol. Let's deploy a Windows 10 Pro VM under a resource group, which we'll call `azure-networking`. For our case, 2 CPUs and 16 GB of RAM will be enough.
+
 
 <p float="left">
-  <img src="images/Step1_WindowsVMCreation.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+  <img src="images/Step1_WindowsVMCreation.png" height="80%" width="80%"/>
   <!-- <img src="images/Step1_WindowsVMCreation2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> -->
 </p>
 
-<p>
-  The Ubuntu Server VM is not as resource heavy, so we can opt to use one of the cheaper hardware size. To ensure connectivity between the two VMs, we can put this VM under the same virtual network.
-</p>
+The Ubuntu Server VM is not as resource heavy, so we can opt to use one of the cheaper hardware size. To ensure connectivity between the two VMs, we can put this VM under the same virtual network.
 
 <p>
   <img src="images/Step1_UbuntuServerVMCreation.png" height="80%" width="80%"/>
   <img src="images/Step1_UbuntuServerVMCreation_NetworkSettings.png" height="80%" width="80%"/>
 </p>
+
+Now that the VMs are created, we can use **Remote Desktop Connection** to connect to our Windows 10 Pro VM. Once the Windows setup is complete, download [Wireshark](https://www.wireshark.org/download.html). We will download the `Windows x64 installer` and stick with the default settings. Note that the installer will also install the `Npcap` program.
 
 <p>
 <img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
