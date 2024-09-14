@@ -49,7 +49,7 @@ The Ubuntu Server VM is not as resource heavy, so we can opt to use one of the c
   <img src="images/Step1_UbuntuServerVMCreation_NetworkSettings.png" height="80%" width="80%"/>
 </p>
 
-Now that the VMs are created, we can use **Remote Desktop Connection** to connect to our Windows 10 Pro VM. Once the Windows setup is complete, download [Wireshark](https://www.wireshark.org/download.html). We will download the `Windows x64 Installer` and stick with the default settings. Note that the Wireshark installer will also install `Npcap`. Now, open Wireshark and you will be greeted with the following screen.
+Now that the VMs are created, we can use **Remote Desktop Connection** to connect to our Windows 10 Pro VM. Once the Windows setup is complete, download [Wireshark](https://www.wireshark.org/download.html). We will download the `Windows x64 Installer` and stick with the default settings. Note that the Wireshark installer will also install `Npcap`. Now, open Wireshark and you will be greeted with the following screen:
 
 <img src="images/WiresharkMainScreen.png" height="80%" width="80%"/>
 
@@ -60,14 +60,14 @@ With Wireshark we can inspect all incoming and outgoing packets from our compute
 - DNS
 - RDP
 
-Notice that we can filter our packets. Let's first filter by ICMP traffic by typing `icmp` into the filter text field at the top and hitting `Enter`.
+Notice that we can filter our packets. As I am using an Ethernet connection, I will select that caputuring traffic. Let's first filter by ICMP traffic by typing `icmp` into the filter text field at the top and hit apply.
 
 <img src="images/WiresharkICMPFilter.png" height="80%" width="80%"/>
 
-<p>
-<img src="https://i.imgur.com/DJmEXEB.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
-<p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-</p>
-<br />
+Then we can start the packet trace by clicking the button on the top left.
+
+<img src="images/WiresharkICMPFilter2.png" height="80%" width="80%"/>
+
+We should then be greeted with the following screen:
+
+<img src="images/WiresharkICMPBlank.png" height="80%" width="80%"/>
