@@ -105,3 +105,13 @@ Here, the username is what you used to create the Ubuntu VM and the IP address i
 The first couple lines indicate the packets exchanged during authentication. The authentication process uses elliptic curve Diffie-Hellman, a very cryptographically secure public key exchange algorithm that prevents unauthorized access from attackers.
 
 Now, anytime you type in a character, delete a character, or execute a command, packet data is sent to the server and back to you. This makes sense as SSH provides real-time terminal access to the other machine, which means that constant uptime is required if you want to interact with that machine and see changes.
+
+<h4>DHCP Trace</h4>
+
+DHCP is the Dynamic Host Configuration Protocol and it is responsible for assigning IP addresses to network devices. One commonly used command associated with DHCP is the `ipconfig` command. This command lists out the network configuration details of your machine.
+
+<img src="images/ipconfig_output.png" height="80%" width="80%"/>
+
+Of course, if you want more detailed information such as the DHCP servers, DNS servers, or the MAC (physical) address of your network interface card, you can execute `ipconfig /all`:
+
+<img src="images/ipconfig_all_output.png" height="80%" width="80%"/>
