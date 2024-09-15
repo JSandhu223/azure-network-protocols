@@ -68,7 +68,7 @@ Notice that we can filter our packets. As I am using an Ethernet connection, I w
 
 <h4>ICMP Trace</h4>
 
-Let's first filter by ICMP traffic by typing `icmp` into the filter text field at the top and hit apply.
+ICMP is the Internet Control Message Protocol and it is responsible for sending diagnostic information and error reporting between the sender and receiver of a message. Let's first filter by ICMP traffic by typing `icmp` into the filter text field at the top and hit apply.
 
 <img src="images/WiresharkICMPFilter.png" height="80%" width="80%"/>
 
@@ -94,7 +94,7 @@ If we take a look at the Wireshark packet trace, we will notice some packet info
 
 <h4>SSH Trace</h4>
 
-SSH is a protocol that allows one machine to connect to another machine (typically a Linux machine) and interact with it through a command line interface. We can connect to our Ubuntu VM through SSH as follows:
+SSH (Secure Shell) is a protocol that allows one machine to connect to another machine (typically a Linux machine) and interact with it through a command line interface. We can connect to our Ubuntu VM through SSH as follows:
 
 `ssh <USERNAME>@<IP>`
 
