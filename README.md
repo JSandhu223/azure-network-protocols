@@ -94,7 +94,7 @@ If we take a look at the Wireshark packet trace, we will notice some packet info
 
 <h4>SSH Trace</h4>
 
-We can connect to our Ubuntu VM through ssh as follows:
+SSH is a protocol that allows one machine to connect to another machine (typically a Linux machine) and interact with it through a command line interface. We can connect to our Ubuntu VM through SSH as follows:
 
 `ssh <USERNAME>@<IP>`
 
@@ -103,3 +103,5 @@ Here, the username is what you used to create the Ubuntu VM and the IP address i
 <img src="images/SSHPacketTrace.png" height="80%" width="80%"/>
 
 The first couple lines indicate the packets exchanged during authentication. The authentication process uses elliptic curve Diffie-Hellman, a very cryptographically secure public key exchange algorithm that prevents unauthorized access from attackers.
+
+Now, anytime you type in a character, delete a character, or execute a command, packet data is sent to the server and back to you. This makes sense as SSH provides real-time terminal access to the other machine, which means that constant uptime is required if you want to interact with that machine and see changes.
