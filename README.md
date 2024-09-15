@@ -27,12 +27,12 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 <h2>High-Level Steps</h2>
 
 1. Create a Windows 10 Pro and Ubuntu Server virtual machine under the same virtual network
-2. Remote connect into the Windows virtual machine
-3. Install Wireshark
-4. Execute various Windows networking commands and inspect packets in Wireshark
+2. Remote connect into the Windows virtual machine to install Wireshark
+3. Execute various Windows networking commands and inspect packets in Wireshark
 
 <h2>Actions and Observations</h2>
 
+<h3>Step 1 - Virtual Machine Setup</h3>
 
 With Azure, we can deploy a virtual machine to the cloud and connect to it via Remote Desktop Protocol. Let's deploy a Windows 10 Pro VM under a resource group, which we'll call `azure-networking`. For our case, 2 CPUs and 16 GB of RAM will be enough.
 
@@ -49,9 +49,13 @@ The Ubuntu Server VM is not as resource heavy, so we can opt to use one of the c
   <img src="images/Step1_UbuntuServerVMCreation_NetworkSettings.png" height="80%" width="80%"/>
 </p>
 
+<h3>Step 2 - Wireshark Installation</h3>
+
 Now that the VMs are created, we can use **Remote Desktop Connection** to connect to our Windows 10 Pro VM. Once the Windows setup is complete, download [Wireshark](https://www.wireshark.org/download.html). We will download the `Windows x64 Installer` and stick with the default settings. Note that the Wireshark installer will also install `Npcap`. Now, open Wireshark and you will be greeted with the following screen:
 
 <img src="images/WiresharkMainScreen.png" height="80%" width="80%"/>
+
+<h3>Step 3 - Packet Trace</h3>
 
 With Wireshark we can inspect all incoming and outgoing packets from our computer. We will inspect the following traffic:
 - ICMP
@@ -60,7 +64,11 @@ With Wireshark we can inspect all incoming and outgoing packets from our compute
 - DNS
 - RDP
 
-Notice that we can filter our packets. As I am using an Ethernet connection, I will select that caputuring traffic. Let's first filter by ICMP traffic by typing `icmp` into the filter text field at the top and hit apply.
+Notice that we can filter our packets. As I am using an Ethernet connection, I will select that for caputuring traffic.
+
+<h4>ICMP Trace</h4>
+
+Let's first filter by ICMP traffic by typing `icmp` into the filter text field at the top and hit apply.
 
 <img src="images/WiresharkICMPFilter.png" height="80%" width="80%"/>
 
@@ -83,3 +91,5 @@ Of course, your IP address configuration may be different so be sure to find you
 If we take a look at the Wireshark packet trace, we will notice some packet information.
 
 <img src="images/PingPacketTrace.png" height="80%" width="80%"/>
+
+<h4>SSH Trace</h4>
