@@ -42,7 +42,7 @@ With Azure, we can deploy a virtual machine to the cloud and connect to it via R
   <!-- <img src="images/Step1_WindowsVMCreation2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/> -->
 </p>
 
-The Ubuntu Server VM is not as resource heavy, so we can opt to use one of the cheaper hardware size. To ensure connectivity between the two VMs, we can put this VM under the same virtual network.
+When creating the Ubuntu Server VM, we will use a password based authenication rather than an SSH key. The Ubuntu Server VM is not as resource heavy as the Windows VM, so we can opt to use one of the cheaper hardware sizes. To ensure connectivity between the two VMs, we can put this VM under the same virtual network.
 
 <p>
   <img src="images/Step1_UbuntuServerVMCreation.png" height="80%" width="80%"/>
@@ -93,3 +93,13 @@ If we take a look at the Wireshark packet trace, we will notice some packet info
 <img src="images/PingPacketTrace.png" height="80%" width="80%"/>
 
 <h4>SSH Trace</h4>
+
+We can connect to our Ubuntu VM through ssh as follows:
+
+`ssh <USERNAME>@<IP>`
+
+Here, the username is what you used to create the Ubuntu VM and the IP address is its private IP. In my case, I connect to it via the command `ssh jay@10.0.0.5`. Then we authenticate with the password used during VM creation. After this is done, you will be presented with a linux command line, indicating we have connected to the Ubuntu server. In Wireshark we will see something like this:
+
+<img src="images/SSHPacketTrace.png" height="80%" width="80%"/>
+
+The first couple lines indicate the packets exchanged during authentication. The authentication process uses elliptic curve Diffie-Hellman, a very cryptographically secure public key exchange algorithm that prevents unauthorized access from attackers.
