@@ -159,3 +159,5 @@ Note that the number associated with each rule is a priority; a smaller number i
 
 <img src="images/AzureNSG_AddInboundRule.png" height="80%" width="80%"/>
 <img src="images/AzureNSG_DenyICMP.png" height="50%" width="50%"/>
+
+Now if we try to ping, say, our linux client, we should get an indication of the ping failing.
