@@ -29,6 +29,7 @@ In this tutorial, we observe various network traffic to and from Azure Virtual M
 1. Create a Windows 10 Pro and Ubuntu Server virtual machine under the same virtual network
 2. Remote connect into the Windows virtual machine to install Wireshark
 3. Execute various Windows networking commands and inspect packets in Wireshark
+4. Edit NSG rules
 
 <h2>Actions and Observations</h2>
 
@@ -142,4 +143,14 @@ DNS (Domain Name System) is a protocol that converts fully qualified domain name
 
 <h4>RDP Trace</h4>
 
-RDP is the Remote Desktop Protocol we used to remote connect to our Windows client. 
+RDP is the Remote Desktop Protocol which we used to remote connect to our Windows client. If you try to filter the packet trace with the keyword `rdp`, you'll notice that there isn't much traffic being captured. This is because this filter only captures *decrypted* RDP traffic. If we want to see **ALL** RDP traffic, we can apply the following filter instead:
+
+`tcp.port == 3389`
+
+Recall that RDP uses TCP as its transport layer protocol on port 3389. TCP is used because a remote connection needs a consistent, in-order delivery of data to be able to interact with the remote machine. After applying this filter, you should notice a flood of traffic every second. This is because every action (i.e. a key click, a mouse movement) is sent to the remote machine and transmitted back.
+
+<h3>NSG Rules</h3>
+
+We can think of NSG rules as the firewall of our Azure virtual machine. Here we can create rules that allow or deny traffic based on an IP address, a range of IP addresses, or protocol. To get to this page on the Azure portal, first navigate to the Windows client VM under the `Virtual Machines` section and go to `Network settings`
+
+<img src="images/AzureNSG.png" height="80%" width="80%"/>
