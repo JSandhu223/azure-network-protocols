@@ -115,3 +115,11 @@ DHCP is the Dynamic Host Configuration Protocol and it is responsible for assign
 Of course, if you want more detailed information such as the DHCP servers, DNS servers, or the MAC (physical) address of your network interface card, you can execute `ipconfig /all`:
 
 <img src="images/ipconfig_all_output.png" height="80%" width="80%"/>
+
+Every once in a while, a user may experience Internet connectivity issues due to DHCP failing to assign an IP address to their machine. Luckily, there is a command to request a new IP address from the DHCP server:
+
+`ipconfig /renew`
+
+What we expect is two packets in the Wireshark trace. A DHCP request (sent by us) and a DHCP response (sent by the DHCP server),
+
+<img src="images/DHCPTrace.png" height="80%" width="80%"/>
