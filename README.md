@@ -123,3 +123,10 @@ Every once in a while, a user may experience Internet connectivity issues due to
 What we expect is two packets in the Wireshark trace. A DHCP request (sent by us) and a DHCP response (sent by the DHCP server),
 
 <img src="images/DHCPTrace.png" height="80%" width="80%"/>
+
+<h4>DNS Trace</h4>
+
+DNS (Domain Name System) is a protocol that converts fully qualified domain names (i.e. website names) into computer readable IP addresses. This is how web browsers are able to understand website names like `www.google.com`. A simple Windows command that utilizes DNS is `nslookup`. This command returns the IP address of a domain, or vice versa, depending on what you supply as the argument.
+
+<img src="images/nslookup_output.png" height="80%" width="80%"/>
+<img src="images/DNSTrace.png" height="80%" width="80%"/>
