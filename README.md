@@ -154,3 +154,8 @@ Recall that RDP uses TCP as its transport layer protocol on port 3389. TCP is us
 We can think of NSG rules as the firewall of our Azure virtual machine. Here we can create rules that allow or deny traffic based on an IP address, a range of IP addresses, or protocol. To get to this page on the Azure portal, first navigate to the Windows client VM under the `Virtual Machines` section and go to `Network settings`
 
 <img src="images/AzureNSG.png" height="80%" width="80%"/>
+
+Note that the number associated with each rule is a priority; a smaller number indicates higher priority. Let's create a rule that denies all inbound ICMP traffic. This will prevent us from pinging any other machine/server.
+
+<img src="images/AzureNSG_AddInboundRule.png" height="80%" width="80%"/>
+<img src="images/AzureNSG_DenyICMP.png" height="50%" width="50%"/>
