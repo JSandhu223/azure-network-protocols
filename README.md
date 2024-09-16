@@ -64,6 +64,15 @@ With Wireshark we can inspect all incoming and outgoing packets from our compute
 - DNS
 - RDP
 
+All these protocols (minus ICMP) have associated port numbers:
+
+| Protocol   | Port Number | Transport Layer Protocol |
+| -------- | ------- | ------- |
+| SSH  | 22    | TCP |
+| DHCP | 67/68     | UDP |
+| DNS    | 53    | UDP |
+| RDP    | 3389    | TCP |
+
 Notice that we can filter our packets. As I am using an Ethernet connection, I will select that for caputuring traffic.
 
 <h4>ICMP Trace</h4>
@@ -130,3 +139,7 @@ DNS (Domain Name System) is a protocol that converts fully qualified domain name
 
 <img src="images/nslookup_output.png" height="80%" width="80%"/>
 <img src="images/DNSTrace.png" height="80%" width="80%"/>
+
+<h4>RDP Trace</h4>
+
+RDP is the Remote Desktop Protocol we used to remote connect to our Windows client. 
